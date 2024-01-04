@@ -1,0 +1,40 @@
+{
+  "InventoryVouchers": [
+    {
+      "IBLNR": "8000000001",
+      "ZSTAT": "A",
+      "WERKS": "ZZZJ",
+      "BERID": "213",
+      "REMARK": "R001",
+      "GIDAT": "2015/02/18",
+      "ZLDAT": "2015/02/19"
+    },
+    {
+      "IBLNR": "8000000002",
+      "ZSTAT": "A",
+      "WERKS": "ZZZJ",
+      "BERID": "213",
+      "REMARK": "R001",
+      "GIDAT": "2015/03/18",
+      "ZLDAT": "2015/03/19"
+    },
+    {
+      "IBLNR": "8000000003",
+      "ZSTAT": "A",
+      "WERKS": "ZZZJ",
+      "BERID": "213",
+      "REMARK": "R001",
+      "GIDAT": "2015/04/18",
+      "ZLDAT": "2015/04/19"
+    },
+    {
+      "IBLNR": "8000000004",
+      "ZSTAT": "A",
+      "WERKS": "ZZZJ",
+      "BERID": "213",
+      "REMARK": "R001",
+      "GIDAT": "2015/04/18",
+      "ZLDAT": "2015/04/19"
+    }
+  ]
+}

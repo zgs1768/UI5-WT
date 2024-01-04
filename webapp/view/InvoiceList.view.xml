@@ -1,0 +1,184 @@
+<mvc:View
+    controllerName="invoicescan.invoicescan.controller.InvoiceList"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:sv="sap.ui.comp.smartvariants"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:f="sap.f"
+>
+    <f:DynamicPage
+        id="seachdynamicPageId"
+        preserveHeaderStateOnScroll="true"
+        headerExpanded="{/headerExpanded}"
+    >
+        <!-- DynamicPage Title -->
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="棚卸検数入力ラベル読み取り（伝票選択）" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <!-- DynamicPage Header -->
+        <f:header>
+            <f:DynamicPageHeader>
+                <FlexBox
+                    alignItems="Start"
+                    justifyContent="SpaceBetween"
+                >
+                    <items>
+                        <Panel
+                            backgroundDesign="Transparent"
+                            class="sapUiNoContentPadding"
+                        >
+                            <content>
+                                <smartFilterBar:SmartFilterBar
+                                    id="ismartFilterBar"
+                                    entitySet="Employees"
+                                >
+                                    <smartFilterBar:controlConfiguration>
+                                        <smartFilterBar:ControlConfiguration
+                                            id="filter1"
+                                            key="EmployeeID"
+                                            visibleInAdvancedArea="true"
+                                        >
+                                            <smartFilterBar:defaultFilterValues>
+                                                <smartFilterBar:SelectOption
+                                                    id="defaultfilter1"
+                                                    low="1"
+                                                />
+                                            </smartFilterBar:defaultFilterValues>
+                                        </smartFilterBar:ControlConfiguration>
+                                        <smartFilterBar:ControlConfiguration
+                                            id="filter2"
+                                            key="Address"
+                                            filterType="single"
+                                            visibleInAdvancedArea="true"
+                                        />
+                                    </smartFilterBar:controlConfiguration>
+
+                                    <!-- <ControlConfiguration
+                                        key="CompanyRating"
+                                        label="Custom Select Field" 
+                                        visibleInAdvancedArea="true"
+                                    >
+                                        <customControl>
+                                            <m:Select
+                                                id="customSelect"
+                                                customData:hasValue="true"
+                                                width="300px"
+                                            >
+                                                <core:Item
+                                                    key="1"
+                                                    text="1"
+                                                />
+                                                <core:Item
+                                                    key="2"
+                                                    text="2"
+                                                />
+                                                <core:Item
+                                                    key="3"
+                                                    text="3"
+                                                />
+                                            </m:Select>
+                                        </customControl>
+                                    </ControlConfiguration> -->
+                                </smartFilterBar:SmartFilterBar>
+                            </content>
+                        </Panel>
+                    </items>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content>
+            <smartTable:SmartTable
+                entitySet="Employees"
+                smartFilterId="ismartFilterBar"
+                tableType="ResponsiveTable"
+                enableExport="false"
+                useVariantManagement="true"
+                useTablePersonalisation="true"
+                header="棚卸 伝票"
+                showRowCount="true"
+                enableAutoBinding="true"
+                demandPopin="true"
+                class="sapUiResponsiveContentPadding"
+                enableAutoColumnWidth="true"
+                editTogglable="false"
+                initiallyVisibleFields="EmployeeID,Address,City,BirthDate,Country"
+            >
+                <Table id="innerUi5Table">
+                    <columns />
+                    <ColumnListItem
+                        id="item"
+                        type="Navigation"
+                        press=".onPress"
+                    />
+                </Table>
+            </smartTable:SmartTable>
+
+            <!-- <smartTable:SmartTable
+                id="idSmartTable"
+                entitySet="Employees"
+                smartFilterId="idBar"
+                tableType="ResponsiveTable"
+                useVariantManagement="false"
+                useTablePersonalisation="true"
+                header="{i18n>tableTitle}"
+                showRowCount="true"
+                beforeRebindTable="onBeforeRebindTable"
+                initialise="onInitSmartfilter"
+            >
+                <table:Table>
+                    <table:columns>
+                        <table:Column
+                            visible="true"
+                            autoResizable="true"
+                            minWidth="95px"
+                            sortProperty="EmployeeID"
+                            filterProperty="EmployeeID"
+                        >
+                            <table:customData>
+                                <core:CustomData
+                                    key="p13nData"
+                                    value='\{"columnKey":"EmployeeID", "leadingProperty":"EmployeeID"}'
+                                />
+                            </table:customData>
+                            <table:label>
+                                <Label text="{i18n>IBLNR}" />
+                            </table:label>
+                            <table:template>
+                                <Label text="{EmployeeID}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column
+                            visible="true"
+                            autoResizable="true"
+                            minWidth="95px"
+                            sortProperty="Address"
+                            filterProperty="Address"
+                        >
+                            <table:customData>
+                                <core:CustomData
+                                    key="p13nData"
+                                    value='\{"columnKey":"Address", "leadingProperty":"Address"}'
+                                />
+                            </table:customData>
+                            <table:label>
+                                <Label text="{i18n>ZSTAT}" />
+                            </table:label>
+                            <table:template>
+                                <Label text="{Address}" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            </smartTable:SmartTable>  -->
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

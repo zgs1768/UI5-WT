@@ -1,0 +1,9 @@
+<mvc:View
+   controllerName="invoicescan.invoicescan.controller.NotFound"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <IllustratedMessage id="asdf21"
+      title="NotFound"
+      
+      description="NotFound.description"/>
+</mvc:View>

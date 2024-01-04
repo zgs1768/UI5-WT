@@ -1,0 +1,106 @@
+<mvc:View
+    xmlns:c="sap.ui.core"
+    controllerName="invoicescan.invoicescan.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    height="100%"
+>
+    <f:DynamicPage
+        id="dynamicPageId"
+        preserveHeaderStateOnScroll="true"
+        headerExpanded="{/headerExpanded}"
+    >
+        <!-- DynamicPage Title -->
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="棚卸検数入力ラベル読み取り" />
+                </f:heading>
+                <f:expandedContent>
+                    <Label text="（検数入力）" />
+                </f:expandedContent>
+                <f:snappedContent>
+                    <Label text="（検数入力）" />
+                </f:snappedContent>
+                <f:snappedTitleOnMobile>
+                    <Title text="（検数入力）" />
+                </f:snappedTitleOnMobile>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <!-- DynamicPage Header -->
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox
+                    alignItems="Start"
+                    justifyContent="SpaceBetween"
+                >
+                    <items>
+                        <Panel
+                            backgroundDesign="Transparent"
+                            class="sapUiNoContentPadding"
+                        >
+                            <content>
+                                <layout:HorizontalLayout allowWrapping="true">
+                                    <layout:VerticalLayout
+                                        class="sapUiMediumMarginEnd"
+                                    >
+                                        <ObjectAttribute
+                                            text="{InventoryVoucher>IBLNR}"
+                                        />
+                                        <ObjectAttribute
+                                            title="{i18n>LGORT}"
+                                            text="{InventoryVoucher>REMARK}"
+                                        />
+                                        <ObjectAttribute
+                                            title="{i18n>GIDAT}"
+                                            text="{InventoryVoucher>GIDAT}"
+                                        />
+                                    </layout:VerticalLayout>
+                                </layout:HorizontalLayout>
+                            </content>
+                        </Panel>
+                    </items>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content />
+
+        <!-- DynamicPage Footer -->
+        <f:footer>
+            <OverflowToolbar>
+                <Button
+                    text="{i18n>handy}"
+                    press=".onHandyPress"
+                    ariaDescribedBy="handyButtonDescription genericButtonDescription"
+                    enabled="false"
+                >
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </Button>
+                <Button
+                    id="scan2"
+                    type="Emphasized"
+                    text="{i18n>scan}"
+                    press=".onscanPress"
+                />
+                <Button
+                    id="confirm2"
+                    text="{i18n>confirm}"
+                    press=".onconfirmPress"
+                />
+                <Button
+                    id="return2"
+                    text="{i18n>return}"
+                    press=".onreturnPress"
+                />
+            </OverflowToolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>

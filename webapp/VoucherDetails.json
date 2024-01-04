@@ -1,0 +1,54 @@
+{
+  "InventoryVouchers": [
+    {
+      "ZEILI": "10",
+      "LGPBE": "A002A",
+      "MATNR": "品目テスト0001 D6706413",
+      "BSTAR": "利用可能在庫",
+      "BUCHM": "20",
+      "INPUTMENGE": "",
+      "MEINS": "PC",
+      "MENGE": "0"
+    },
+    {
+      "ZEILI": "20",
+      "LGPBE": "A002A",
+      "MATNR": "品目テスト0001 D6706413",
+      "BSTAR": "利用可能在庫",
+      "BUCHM": "20",
+      "INPUTMENGE": "",
+      "MEINS": "PC",
+      "MENGE": "0"
+    },
+    {
+      "ZEILI": "30",
+      "LGPBE": "A002A",
+      "MATNR": "品目テスト0001 D6706413",
+      "BSTAR": "利用可能在庫",
+      "BUCHM": "20",
+      "INPUTMENGE": "",
+      "MEINS": "PC",
+      "MENGE": "0"
+    },
+    {
+      "ZEILI": "40",
+      "LGPBE": "A002A",
+      "MATNR": "品目テスト0001 D6706413",
+      "BSTAR": "利用可能在庫",
+      "BUCHM": "20",
+      "INPUTMENGE": "",
+      "MEINS": "PC",
+      "MENGE": "0"
+    },
+    {
+      "ZEILI": "50",
+      "LGPBE": "A002A",
+      "MATNR": "品目テスト0001 D6706413",
+      "BSTAR": "利用可能在庫",
+      "BUCHM": "20",
+      "INPUTMENGE": "",
+      "MEINS": "PC",
+      "MENGE": "0"
+    }
+  ]
+}

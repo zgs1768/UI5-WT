@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="invoicescan.invoicescan.controller.Detail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+>
+    <Page id="datailpage" title="{i18n>detailPageTitle}">
+        <!-- <content>
+            <mvc:XMLView viewName="invoicescan.invoicescan.view.DetailData" />
+        </content> -->
+        
+        <footer>
+            <Bar id="ibar">
+                <contentRight>
+                    <Button id="buttondetail"
+                        text="{i18n>handy}"
+                        press=".onHandyPress"
+                        ariaDescribedBy="handyButtonDescription genericButtonDescription"
+                        enabled="false"
+                    >
+                        <layoutData>
+                            <FlexItemData id="fileid" growFactor="1" />
+                        </layoutData>
+                    </Button>
+                    <Button
+                        id="scan"
+                        type="Emphasized"
+                        text="{i18n>scan}"
+                        press=".onscanPress"
+                    />
+                    <Button
+                        id="confirm"
+                        text="{i18n>confirm}"
+                        press=".onconfirmPress"
+                    />
+                    <Button
+                        id="return"
+                        text="{i18n>return}"
+                        press=".onreturnPress"
+                    />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
